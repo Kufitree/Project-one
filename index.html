@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Habit Tracker</h1>
+            <p class="subtitle">Build better habits, one day at a time.</p>
+        </header>
+
+        <div class="input-group">
+            <input type="text" id="habit-input" placeholder="Enter a new habit..." autocomplete="off">
+            <button id="add-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </button>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <span class="stat-value" id="total-habits">0</span>
+                <span class="stat-label">Active Habits</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="completed-today">0%</span>
+                <span class="stat-label">Today's Progress</span>
+            </div>
+        </div>
+
+        <ul id="habit-list" class="habit-list">
+            <!-- Habits will be added here dynamically -->
+        </ul>
+        
+        <div id="empty-state" class="empty-state">
+            <p>No habits yet. Start by adding one above!</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
